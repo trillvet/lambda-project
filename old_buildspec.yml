@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install python dependencies"
+      - python -m pip install --upgrade pip
+      - if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi
+  build:
+    commands:
+      - echo "Package Lambda function"
+      - zip -r function.zip lambda_function.py .
+artifacts:
+  files:
+    - function.zip
+  name: function

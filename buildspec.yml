@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12  # Adjust based on your Lambda runtime (e.g., Python 3.9, Node.js 14, etc.)
+  build:
+    commands:
+      - echo "Zipping Lambda code..."
+      - zip -r function.zip .
+
+artifacts:
+  files:
+    - function.zip
+  discard-paths: yes
