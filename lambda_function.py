@@ -1,5 +1,5 @@
 def lambda_handler(event, context):
     return {
         'statusCode': 200,
-        'body': 'Fifth Attempt. Do I still get two project builds?'
+        'body': 'Day 3, first attempt. Skipping the build step. I also have a little bit better understanding of what is happening.'
     }
